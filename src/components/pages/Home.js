@@ -42,11 +42,13 @@ const range = (count) => {
 class Home extends Component {
 
   onFocus = () => {
-    this.slider.slickPlay();
+    if(this.slider)
+      this.slider.slickPlay();
   }
   
   onBlur = () => {
-    this.slider.slickPause();
+    if(this.slider)
+      this.slider.slickPause();
   }
 
   componentDidMount() {

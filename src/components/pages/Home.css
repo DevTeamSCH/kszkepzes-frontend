@@ -5,8 +5,11 @@
 .car-text-kszk {
   position: absolute;
   width: 100%;
-  top: 0px;
+  top: 1vw;
+  text-shadow: black 0px 0px 10px;
   -webkit-text-fill-color: white;
   -webkit-text-stroke-color: black;
   -webkit-text-stroke-width: 0.75px;
 }
+
+

@@ -1,6 +1,6 @@
 {
   "name": "kszkepzes-frontend",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": false,
   "dependencies": {
     "axios": "^0.19.2",

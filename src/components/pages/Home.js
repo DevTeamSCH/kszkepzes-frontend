@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import {
   Button,
   Container,
@@ -17,7 +17,7 @@ import KSZKbiglogo from '../images/kszk_big_logo.png';
 const settings = {
   dots: false,
   autoplay: true,
-  arrows: false,
+  arrows: true,
   infinite: true,
   speed: 2000,
   autoplaySpeed: 4000,
@@ -37,13 +37,39 @@ const range = (count) => {
   return newArray;
 };
 
+
+
 class Home extends Component {
+
+  onFocus = () => {
+    if(this.slider)
+      this.slider.slickPlay();
+  }
+  
+  onBlur = () => {
+    if(this.slider)
+      this.slider.slickPause();
+  }
+
+  componentDidMount() {
+    window.addEventListener("focus", this.onFocus);
+    window.addEventListener("blur", this.onBlur);
+  }
+  
+
+  componentWilUnmount() {
+    window.removeEventListener("focus", this.onFocus)
+    window.removeEventListener("blur", this.onBlur);
+  }
+
+
+
   render() {
     const kszk_age = new Date().getFullYear() - 1976
     return (
       <div>
         <div className='car-image-kszk'>
-          <Slider {...settings}>
+          <Slider ref={slider => (this.slider = slider)} {...settings}>
             {
               range(32).map(image => (
                 <div key={image}>

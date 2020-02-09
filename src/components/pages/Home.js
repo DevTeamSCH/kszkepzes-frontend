@@ -249,64 +249,64 @@ class Home extends Component {
   renderText(){
     const kszk_age = new Date().getFullYear() - 1976
     return (
-      <Segment style={{ padding: '2em 0em 6em' }} vertical>
+      <Segment style={{ padding: '8em 0em', fontFamily: 'Arial' }} vertical>
         <Container text>
-          <Header as='h3' style={{ fontSize: '2em' }}>
+          <Header as='h3' style={{ fontSize: '2em', fontFamily: 'Arial' }}>
             Kik is vagyunk mi?
           </Header>
-          <p style={{ fontSize: '1.33em' }}>
-            A Kollégiumi Számítástechnikai Kör az Egyetem legrégebben működő
-            és legnagyobb aktív, informatikával foglalkozó öntevékeny
-            csoportosulása, idén ünnepeljük {kszk_age}. születésnapunkat. A patinás
-            név mögött vidám hangulatú, alkotó kedvű csapat rejlik, mely a Kar
-            jó szakmai képességű, számítástechnika iránt kiemelten érdeklődő
-            tagjaiból verbuválódott, és bővül évente új tehetségekkel, lelkes
-            informatikusokkal, villamosmérnökökkel.
+          <p style={{ fontSize: '1.33em', fontFamily: 'Arial' }}>
+            A Kollégiumi Számítástechnikai Kör az Egyetem legrégebben működő
+            és legnagyobb aktív, informatikával foglalkozó öntevékeny
+            csoportosulása, idén ünnepeljük {kszk_age}. születésnapunkat. A patinás
+            név mögött vidám hangulatú, alkotó kedvű csapat rejlik, mely a Kar
+            jó szakmai képességű, számítástechnika iránt kiemelten érdeklődő
+            tagjaiból verbuválódott, és bővül évente új tehetségekkel, lelkes
+            informatikusokkal, villamosmérnökökkel.
           </p>
           <Button as={Link} size='large' to='/groups'>
             Ismerd meg a köreinket! <Icon name='right arrow' />
           </Button>
           <Divider as='h4' className='header' style={{ margin: '3em 0em' }} />
-          <Header as='h3' style={{ fontSize: '2em' }}>
+          <Header as='h3' style={{ fontSize: '2em', fontFamily: 'Arial' }}>
             Lehetőségek
           </Header>
-          <p style={{ fontSize: '1.33em' }}>
-            A KSZK a lehetőségek tárháza, a hely ahol Te – leendő mérnök –
-            minden területen kipróbálhatod, továbbképezheted magad. Nálunk
-            kibontakoztathatod kreativitásod, tapasztalatot, mérnöki
-            szemléletet szerezhetsz, miközben az ún. soft skill-jeidet is
-            fejlesztheted. Ha számodra a szakma hivatás, ha szeretsz új
-            dolgokat alkotni vagy csak jó társaságra vágysz, a legjobb helyre
-            kerültél. A reszort körei a szakma egy-egy meghatározó területével
-            foglalkoznak a fejlesztés és üzemeltetés területén.
+          <p style={{ fontSize: '1.33em', fontFamily: 'Arial' }}>
+            A KSZK a lehetőségek tárháza, a hely ahol Te – leendő mérnök –
+            minden területen kipróbálhatod, továbbképezheted magad. Nálunk
+            kibontakoztathatod kreativitásod, tapasztalatot, mérnöki
+            szemléletet szerezhetsz, miközben az ún. soft skill-jeidet is
+            fejlesztheted. Ha számodra a szakma hivatás, ha szeretsz új
+            dolgokat alkotni vagy csak jó társaságra vágysz, a legjobb helyre
+            kerültél. A reszort körei a szakma egy-egy meghatározó területével
+            foglalkoznak a fejlesztés és üzemeltetés területén.
           </p>
           <Divider as='h4' className='header' style={{ margin: '3em 0em' }} />
-          <Header as='h3' style={{ fontSize: '2em' }}>
-            Képzésünk
+          <Header as='h3' style={{ fontSize: '2em', fontFamily: 'Arial' }}>
+            Képzésünk
           </Header>
-          <p style={{ fontSize: '1.33em' }}>
-            Kilenc alkalmas képzésünk végén Te is igazi KSZK-ssá válhatsz,
-            hiszen rengeteg szakmai tudást igyekszünk átadni nektek. A
-            képzésalkalmak rendkívül jó hangulatban telnek, és a szociális
-            irányultságú foglalkozások alatt egy nagyon jó csapat kovácsolódik
-            az érdeklődőkből. Az első képzés időpontja február 16. vasárnap
-            18:00, ettől kezdve pedig minden héten találkozunk ugyanabban az
-            időpontban. A képzés ideje alatt április 17-19 között rendezünk
-            tábort. Az alkalmakon és a táborban kötelező a részvétel.
+          <p style={{ fontSize: '1.33em', fontFamily: 'Arial' }}>
+            Kilenc alkalmas képzésünk végén Te is igazi KSZK-ssá válhatsz, 
+            hiszen rengeteg szakmai tudást igyekszünk átadni nektek. 
+            A képzésalkalmak rendkívül jó hangulatban telnek, és a szociális 
+            irányultságú foglalkozások alatt egy nagyon jó csapat kovácsolódik 
+            az érdeklődőkből. Az első képzés időpontja február 16. vasárnap 18:00, 
+            ettől kezdve pedig minden héten találkozunk ugyanabban az időpontban. 
+            A képzés ideje alatt április 17-19 között rendezünk tábort. 
+            Az alkalmakon és a táboron kötelező a részvétel.
           </p>
           <Divider as='h4' className='header' style={{ margin: '3em 0em' }} />
           <Segment inverted color='red' tertiary>
-            <Header as='h3' style={{ fontSize: '2em' }}>
+            <Header as='h3' style={{ fontSize: '2em', fontFamily: 'Arial' }}>
               Korlátos férőhely
             </Header>
-            <p style={{ fontSize: '1.33em' }}>
+            <p style={{ fontSize: '1.33em', fontFamily: 'Arial' }}>
               Általánosságban elmondható, hogy a KSZK tagjai rengeteg dologgal foglalkoznak
               a hétköznapjaik során, hogy minden informatikai rendszer úgy működjön
               a kollégiumban, ahogy kell. Így van ez velünk képzőkkel is, emiatt
               hetente csak egy képzésalkalmat tudunk tartani. Mivel az oktatóterem
               férőhelyében korlátozott, ezért a képzésre maximum 35 embert tudunk befogadni.
             </p>
-            <p style={{ fontSize: '1.33em' }}>
+            <p style={{ fontSize: '1.33em', fontFamily: 'Arial' }}>
               Sajnos előfordulhat olyan eset, hogy valaki már nem fér be a képzésre,
               ezért kérünk titeket, hogy ennek tudatában jelentkezzetek majd.
               Ilyen esetben reméljük ez nem szegi kedveteket és jövőre újra próbálkoztok majd!

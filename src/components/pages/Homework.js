@@ -346,28 +346,28 @@ class Homework extends Component {
             : 
             <div>
               {this.renderHomeworksTable(active, staff)}
-              {!active && !staff ?
-                <Header
-                  as='h3'
-                  content={
-                    <div >
-                      Jelenlegi bitjeid száma:
-                      <Label color='green' size='large'>
-                        {this.props.user.bits} bit 
-                      </Label>
-                    </div>
-                  }
-                  style={{
-                      fontWeight: 'normal',
-                      marginTop: '0.5em',
-                    }}
-                  textAlign='right'
-                />
-                : null
-              }
             </div>
-            
           }
+          {!active && !staff ?
+              <Header
+                as='h3'
+                content={
+                  <div >
+                    Jelenlegi bitjeid száma:
+                    <Label color='green' size='large'>
+                      {this.props.user.bits} bit 
+                    </Label>
+                  </div>
+                }
+                style={{
+                    fontWeight: 'normal',
+                    marginTop: '0.5em',
+                    marginBottom: '1em'
+                  }}
+                textAlign='right'
+              />
+              : null
+            }
         </Container>
       </Segment>
     );

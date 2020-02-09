@@ -37,13 +37,15 @@ class EventDetail extends Component {
     return this.props.trainees?.map((item) => {
       const notes = this.props.eventNotes?.filter(note => note.profile === item.id);
       return (
-        <TraineeTableRow
-          selectedEvent={event}
-          notes={notes}
-          trainee={item}
-          edit={this.state.edit}
-          key={item.id}
-        />
+        item.role === 'Student' ? 
+          <TraineeTableRow
+            selectedEvent={event}
+            notes={notes}
+            trainee={item}
+            edit={this.state.edit}
+            key={item.id}
+          />
+        : null
       );
     });
   }

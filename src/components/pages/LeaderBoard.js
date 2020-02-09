@@ -15,20 +15,22 @@ class LeaderBoard extends Component {
         - (Number(a.homework_bits) + a.events_visited)
     }).map((trainee) => { 
       return (
-        <Table.Row key={trainee.nick}>
-          <Table.Cell textAlign='center'>
-            {trainee.full_name} 
-          </Table.Cell>
-          <Table.Cell textAlign='center' >
-            {trainee.events_visited}
-          </Table.Cell>
-          <Table.Cell textAlign='center'>
-            {Number(trainee.homework_bits)}
-          </Table.Cell>
-          <Table.Cell textAlign='center'>
-            {Number(trainee.homework_bits) + trainee.events_visited}
-          </Table.Cell>
-        </Table.Row>
+        trainee.role === 'Student' ?
+          <Table.Row key={trainee.nick}>
+            <Table.Cell textAlign='center'>
+              {trainee.full_name} 
+            </Table.Cell>
+            <Table.Cell textAlign='center' >
+              {trainee.events_visited}
+            </Table.Cell>
+            <Table.Cell textAlign='center'>
+              {Number(trainee.homework_bits)}
+            </Table.Cell>
+            <Table.Cell textAlign='center'>
+              {Number(trainee.homework_bits) + trainee.events_visited}
+            </Table.Cell>
+          </Table.Row>
+        : null
       )
     })
   }

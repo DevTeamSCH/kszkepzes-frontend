@@ -15,7 +15,7 @@ import { GET_TASKS,
   GET_DOCUMENTS,
   CORRECT_SOLUTION,
   SELECT_SOLUTION,
-  CHECK } from './types';
+  CHECK, SETCHECKTRUE } from './types';
 
 export const getTasks = () => (
   async (dispatch) => {
@@ -269,6 +269,12 @@ export const correctSolution = (id, corrected, accepted, note) => (
 export const check = name => (
   (dispatch) => {
     dispatch({ type: CHECK, target: name });
+  }
+);
+
+export const setchecktrue = name => (
+  (dispatch) => {
+    dispatch({ type: SETCHECKTRUE, target: name });
   }
 );
 

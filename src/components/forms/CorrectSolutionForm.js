@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { correctSolution,
   writeSolution,
   check,
+  setchecktrue,
   clearWrite,
   getSolutions,
   getDocuments,
@@ -92,7 +93,10 @@ class CorrectSolutionForm extends Component {
           <Button
             color='green'
             inverted={!accepted}
-            onClick={() => this.props.check('accepted')}
+            onClick={() => {
+              this.props.check('accepted')
+              this.props.setchecktrue('corrected')
+            }}
           >
             <Checkbox
               label='Elfogadható'
@@ -159,6 +163,7 @@ export default connect(mapStateToProps, {
   correctSolution,
   writeSolution,
   check,
+  setchecktrue,
   clearWrite,
   getSolutions,
   getDocuments,

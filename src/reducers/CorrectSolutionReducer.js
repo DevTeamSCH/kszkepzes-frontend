@@ -1,4 +1,4 @@
-import { WRITE_SOLUTION, CHECK, CLEAR_WRITE, SELECT_SOLUTION } from '../actions/types';
+import { WRITE_SOLUTION, CHECK, SETCHECKTRUE, CLEAR_WRITE, SELECT_SOLUTION } from '../actions/types';
 
 const INITIAL_STATE = {
   accepted: false,
@@ -20,6 +20,11 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         [action.target]: !state[action.target],
+      };
+    case SETCHECKTRUE:
+      return {
+        ...state,
+        [action.target]: true,
       };
     case CLEAR_WRITE:
       return INITIAL_STATE;

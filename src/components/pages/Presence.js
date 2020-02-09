@@ -31,12 +31,14 @@ class Presence extends Component {
   renderTraineesWithEvents() {
     return this.props.trainees.map((trainee) =>
     { return (
-      <Table.Row key={Math.random()}>
-        <Table.Cell textAlign='center'>
-          {trainee.full_name}
-        </Table.Cell>
-        {this.renderVisitedStatus(trainee)}
-      </Table.Row>
+      trainee.role === 'Student' ? 
+        <Table.Row key={Math.random()}>
+          <Table.Cell textAlign='center'>
+            {trainee.full_name}
+          </Table.Cell>
+          {this.renderVisitedStatus(trainee)}
+        </Table.Row>
+      : null
     );
     });
   }

@@ -61,58 +61,6 @@ class News extends Component {
         </Item.Content>
       </Item>
     ));
-
-  // renderNews() {
-  //   return this.props.news.map(item => (
-  //     <Item key={item.id}>
-  //       <Item.Content>
-  //         <Item.Header
-  //           style={{ fontSize: '2em', width: '100%' }}
-  //         >
-  //           <Grid>
-  //             <Grid.Column width={12}>
-  //               {item.title}
-  //             </Grid.Column>
-  //             { this.props.user.role === 'Staff' ?
-  //             <Grid.Column floated='right' width={4}>
-  //               <EditNewsForm
-  //                 onClick={() => {
-  //                   this.props.setSelectedNews(item)
-  //                 }}
-  //               />
-  //               <Button
-  //                 compact
-  //                 color='red'
-  //                 size='mini'
-  //                 onClick={() => this.props.deleteNews(item)}
-  //               >
-  //                 Delete
-  //               </Button>
-  //             </Grid.Column>
-  //             : null }
-  //           </Grid>
-  //         </Item.Header>
-  //         <Item.Description className='news-text' style={{ fontSize: '1.33em' }}>
-  //           {this.renderMultiLine(item.text)}
-  //         </Item.Description>
-  //         <Item.Extra>
-  //           <Grid>
-  //             <Grid.Row className='news-extra'>
-  //               <Grid.Column floated='left' width={10}>
-  //                 <p> Készült: {moment(item.created_at).format('LLLL')} </p>
-  //                 <p> Szerkesztve: {moment(item.updated_at).format('LLLL')}</p>
-  //               </Grid.Column>
-  //               <Grid.Column floated='right' width={5}>
-  //                 <p> Írta: <strong>{item.author}</strong></p>
-  //                 {/* TODO get the edited by name */}
-  //                 <p> Szerkesztette: {item.last_update_by}</p>
-  //               </Grid.Column>
-  //             </Grid.Row>
-  //           </Grid>
-  //         </Item.Extra>
-  //       </Item.Content>
-  //     </Item>
-  //   ));
   }
 
   renderMultiLine(text) {
@@ -122,7 +70,7 @@ class News extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{paddingTop: '1em'}}>
         <Segment vertical>
           {/*  { this.props.user.is_superuser ? <AddNewsForm /> : ''} */}
           <Container text textAlign='center'>

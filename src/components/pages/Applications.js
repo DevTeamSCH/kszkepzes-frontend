@@ -67,7 +67,7 @@ class Applications extends Component {
   render() {
     return (
       <Container
-        textAlign='center' style={{paddingTop: '1em', paddingBottom: '3em'}}
+        textAlign='center' style={{paddingTop: '1em', paddingBottom: '5em'}}
       >
         <Table color='blue' unstackable celled selectable compact>
           <Table.Header>

@@ -45,7 +45,7 @@ const menuItems = [
     text: 'Mentorok',
     to: '/mentors',
     prefix: '',
-    permissionLevel: 1,
+    permissionLevel: 2,
   },
   {
     text: 'Statisztika',

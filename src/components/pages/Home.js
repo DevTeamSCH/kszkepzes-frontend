@@ -282,7 +282,7 @@ class Home extends Component {
           </p>
           <Divider as='h4' className='header' style={{ margin: '3em 0em' }} />
           <Header as='h3' style={{ fontSize: '2em', fontFamily: 'Arial' }}>
-            Képzésünk
+            Képzésünk
           </Header>
           <p style={{ fontSize: '1.33em', fontFamily: 'Arial' }}>
             Kilenc alkalmas képzésünk végén Te is igazi KSZK-ssá válhatsz, 

@@ -190,9 +190,9 @@ class Profile extends Component {
             disabled={!canEdit}
           />
           <br />
-          <Form.Checkbox
+          <Form.Checkbox required
             name='signed'
-            label='Szeretnék jelentkezni a KSZKépzésre'
+            label='Szeretnék a képzés során emaileket kapni és jelentkezni a KSZKépzésre'
             onChange={(_, v) =>
               this.props.textChange({ target: { name: v.name, value: v.checked } })
             }
@@ -203,7 +203,7 @@ class Profile extends Component {
           {canEdit ? 
           <Form.Button
             primary
-            style={{ marginBottom: '5em' }}
+            style={{ marginBottom: '5em' }} disabled={!signed}
             onClick={() => this.props.submitRegistration({
               nick, motivationAbout, motivationProfession, motivationExercise, signed, groups, id,
             })}

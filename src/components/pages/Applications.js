@@ -50,20 +50,20 @@ class Applications extends Component {
               {profile.full_name}
             </Link>
           </Table.Cell>
-          <Table.Cell textAlign='center'>
           { format.role === 'Staff' ? null :
-            <ConfirmModal
-            button = {<Button
-              color='blue'
-              size='tiny'
-            >
-              ADD STAFF STATUS
-            </Button>}
-            text='staff jogot adsz neki'
-            onAccept={() => this.props.setStatus(profile.id, 'Staff')}
-            />
+            <Table.Cell textAlign='center'>
+              <ConfirmModal
+              button = {<Button
+                color='blue'
+                size='tiny'
+              >
+                ADD STAFF STATUS
+              </Button>}
+              text='staff jogot adsz neki'
+              onAccept={() => this.props.setStatus(profile.id, 'Staff')}
+              />
+            </Table.Cell>
           }
-          </Table.Cell>
         </Table.Row>
       : null
       );
@@ -80,20 +80,20 @@ class Applications extends Component {
               {profile.full_name}
             </Link>
           </Table.Cell>
-          <Table.Cell textAlign='center'>
           { format.role === 'Staff' ? null :
-            <ConfirmModal
-            button = {<Button
-              color='blue'
-              size='tiny'
-            >
-              ADD STAFF STATUS
-            </Button>}
-            text='staff jogot adsz neki'
-            onAccept={() => this.props.setStatus(profile.id, 'Staff')}
-            />
+            <Table.Cell textAlign='center'>
+              <ConfirmModal
+              button = {<Button
+                color='blue'
+                size='tiny'
+              >
+                ADD STAFF STATUS
+              </Button>}
+              text='staff jogot adsz neki'
+              onAccept={() => this.props.setStatus(profile.id, 'Staff')}
+              />
+            </Table.Cell>
           }
-          </Table.Cell>
         </Table.Row>
       : null
       );
@@ -108,7 +108,26 @@ class Applications extends Component {
             <Table.HeaderCell textAlign='center'>
               <Label color={format.color}>{format.text}</Label>
             </Table.HeaderCell>
-            <Table.HeaderCell width={3} />
+            {format.role !== 'Staff' ?
+              <Table.HeaderCell width={3} textAlign='center'>
+                <Label color={null}>
+                  {format.role === 'no' ?
+                    this.props.profiles.filter(profile => {
+                      return profile.signed === false 
+                        && profile.role !== 'Staff'
+                    }).length
+                  :
+                    this.props.profiles.filter(profile => {
+                      return profile.role === format.role 
+                        && (profile.signed === true 
+                            || profile.role === 'Staff')
+                    }).length
+                  } fő
+                </Label>
+              </Table.HeaderCell>
+              : null
+            }
+            
           </Table.Row>
         </Table.Header>
         <Table.Body>

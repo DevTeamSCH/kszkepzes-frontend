@@ -23,11 +23,17 @@ class ApplicantProfile extends Component {
             <Item.Description>
               <Container textAlign='justified' style={{ padding: '1em' }}>
                 <Header as='h3'>Magamról, eddigi tevékenységem:</Header>
-                <p>{motivation_about}</p>
+                <p>{motivation_about
+                  ?.split ('\n').map ((item, i) => <div key={i}>{item}</div>)}
+                </p>
                 <Header as='h3'>Szakmai motiváció:</Header>
-                <p>{motivation_profession}</p>
+                <p>{motivation_profession
+                  ?.split ('\n').map ((item, i) => <div key={i}>{item}</div>)}
+                </p>
                 <Header as='h3'>Feladatok megoldása:</Header>
-                <p>{motivation_exercise}</p>
+                <p>{motivation_exercise
+                  ?.split ('\n').map ((item, i) => <div key={i}>{item}</div>)}
+                </p>
               </Container>
               <Container textAlign='center' style={{ padding: '1em' }}>
                 <Header as='h3'>Státusz:</Header>

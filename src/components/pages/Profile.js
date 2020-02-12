@@ -190,7 +190,7 @@ class Profile extends Component {
             disabled={!canEdit}
           />
           <br />
-          <Form.Checkbox required
+          <Form.Checkbox
             name='signed'
             label='Szeretnék a képzés során emaileket kapni és jelentkezni a KSZKépzésre'
             onChange={(_, v) =>

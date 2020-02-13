@@ -70,7 +70,7 @@ class News extends Component {
 
   render() {
     return (
-      <div style={{paddingTop: '1em'}}>
+      <div style={{paddingTop: '1em', paddingBottom: '5em'}}>
         <Segment vertical>
           {/*  { this.props.user.is_superuser ? <AddNewsForm /> : ''} */}
           <Container text textAlign='center'>

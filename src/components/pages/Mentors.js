@@ -38,31 +38,6 @@ class Mentors extends Component {
 
   renderMentorsMobile() {
     return this.props.mentors.map( (item, index) => (
-      // <Card style={{maxWidth: '100%', minWidth: '100%'}}>
-      //   <Card.Content style={{padding: '0'}}>
-      //       <Item.Group>
-      //           <Item>
-      //             <Item.Image size='medium' src={item.image} />
-      //             <Item.Content style={{padding: '1rem'}}>
-      //               <Item.Header>{item.name}</Item.Header>
-      //               <Item.Extra>
-      //                 <Label><Icon name='mail'></Icon>{item.email}</Label>
-      //               </Item.Extra>
-      //             </Item.Content>
-      //           </Item>
-      //           <Item>
-      //             <Item.Content style={{padding: '1rem'}}>
-      //                 <Item.Description>
-      //                     <p>{item.text}</p>
-      //                 </Item.Description>
-      //                 <Item.Extra>
-      //                   <Label><Icon name='mail'></Icon>{item.email}</Label>
-      //                 </Item.Extra>
-      //             </Item.Content>
-      //           </Item>
-      //       </Item.Group>
-      //   </Card.Content>
-      // </Card>
       <Card key={item.id}>
         <Image src={item.image} wrapped ui={false}/>
         <Card.Content>

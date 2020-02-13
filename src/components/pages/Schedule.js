@@ -34,7 +34,7 @@ class Schedule extends Component {
           <h2>
              <Grid>
               <Grid.Column floated='left' width={5} textAlign='left'>
-                 <Icon name='quidditch' color='blue' />{event.name}
+                 <Icon name='calendar alternate outline' color='blue' /> {event.name}
               </Grid.Column>
               <Grid.Column floated='right' width={8} textAlign='right'>
                 {moment(event.date).locale('hu').format('LLLL')}
@@ -42,8 +42,8 @@ class Schedule extends Component {
             </Grid>
           </h2>
          </Accordion.Title>
-         <Accordion.Content active={activeIndex === event.id}>
-           <Segment>
+         <Accordion.Content active={activeIndex === event.id} >
+           <Segment textAlign='left' style={{overflowWrap:'break-word'}}>
              {event.description}
            </Segment>
          </Accordion.Content>

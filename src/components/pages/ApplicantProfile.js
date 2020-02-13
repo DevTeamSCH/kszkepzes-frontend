@@ -4,21 +4,53 @@ import { connect } from 'react-redux';
 import { getSelectedProfile, setStatus } from '../../actions/statistics';
 import ConfirmModal from '../forms/ConfirmModal';
 
+const groupTypes = {
+  HAT: {
+    name: 'Hallgatói Tudásbázis',
+    color: 'purple',
+  },
+  SYS: {
+    name: 'Sysadmin',
+    color: 'violet',
+  },
+  NET: {
+    name: 'NETeam',
+    color: 'blue',
+  },
+  ST: {
+    name: 'SecurITeam',
+    color: 'teal',
+  },
+  DT: {
+    name: 'DevTeam',
+    color: 'green',
+  },
+};
+
 class ApplicantProfile extends Component {
   UNSAFE_componentWillMount() {
     this.props.getSelectedProfile(this.props.match.params.id);
   }
 
   render() {
-    const { id, signed, role, full_name, nick, motivation_about, motivation_exercise, motivation_profession }
+    const { id, signed, role, full_name, 
+      nick, motivation_about, motivation_exercise, 
+      motivation_profession, groups }
     = this.props.selectedProfile;
     return (
       <Container style={{ paddingTop: '3em', paddingBottom: '6em' }}>
         <Item>
           <Item.Content>
-            <Container textAlign='center'>
+            <Container textAlign='center' style={{paddingBottom: '2em'}}>
               <Header as='h2'>{full_name}</Header>
               <Item.Meta>{nick}</Item.Meta>
+              <Header as='h2'>{groups?.map(group => {
+                return (
+                <Label color={groupTypes[group].color}>
+                  {groupTypes[group].name}
+                </Label>
+                )
+              })}</Header>
             </Container>
             <Item.Description>
               <Container textAlign='justified' style={{ padding: '1em' }}>
@@ -34,6 +66,7 @@ class ApplicantProfile extends Component {
                 <p>{motivation_exercise
                   ?.split ('\n').map ((item, i) => <div key={i}>{item}</div>)}
                 </p>
+                
               </Container>
               <Container textAlign='center' style={{ padding: '1em' }}>
                 <Header as='h3'>Státusz:</Header>

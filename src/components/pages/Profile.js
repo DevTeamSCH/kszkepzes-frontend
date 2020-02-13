@@ -164,10 +164,10 @@ class Profile extends Component {
                     oldalak többsége is működik. Szerinted mi lehet a hiba oka?
                     </li>
                     <li>
-                    Találsz egy értelmetlen szöveget egy honlapon (például: <a href='http://kszkepzes18.sch.bme.hu/zebra.html'>http://kszkepzes18.sch.bme.hu/zebra.html</a>), de feltűnik, hogy két egyenlőségjellel fejeződik be. Nyomozz, s a végeredményt (amit találtál) írd ide!
+                    Találsz egy értelmetlen szöveget egy honlapon (például: <a href='https://ujonc.kszk.bme.hu/zebra.html'>https://ujonc.kszk.bme.hu/zebra.html</a>), de feltűnik, hogy két egyenlőségjellel fejeződik be. Nyomozz, s a végeredményt (amit találtál) írd ide!
                     </li>
                     <li>
-                    A <b>kszkepzes18.sch.bme.hu</b> címen elérhető gépen
+                    A <b>ujonc.kszk.bme.hu</b> címen elérhető gépen
                     fut egy szolgáltatás az alapértelmezett <b>5432</b> porton
                     (használd az előző feladatban kapott adatokat).
                     Belépés után keresd meg a feladat megoldását!

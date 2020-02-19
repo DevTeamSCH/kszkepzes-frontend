@@ -183,10 +183,13 @@ class AddSolutionForm extends Component {
                 onAccept={() => {
                   this.props.addSolution({
                     task, accepted, corrected, note, name, description, file,
+                    }).then( ()=> {
+                      alert('Sikeres feltöltés!')
+                      this.setState({ showModal: false });
+                      this.props.clearWrite();
+                    }, ()=> {
+                      alert('Sikertelen feltöltés!')
                     });
-                  this.setState({ showModal: false });
-                  this.props.clearWrite();
-                  window.location.reload();
                   }
                 }
               />

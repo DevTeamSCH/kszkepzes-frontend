@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Modal, Button, Form, Input, TextArea, Icon, Header, Segment, Divider } from 'semantic-ui-react';
+import { Modal, Button, Form, Input, TextArea, Icon, Header, Segment, Divider, Dimmer, Loader } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { addSolution, writeSolution, writeSolutionFile, addDocument, clearWrite } from '../../actions/homework';
 import './Forms.css';
@@ -25,6 +25,7 @@ class AddSolutionForm extends Component {
     super(props);
     this.state = {
       showModal: false,
+      uploadState: true,
     };
   }
 
@@ -176,18 +177,30 @@ class AddSolutionForm extends Component {
                     inverted
                     color='green'
                   >
-                    <Icon name='checkmark' /> Beadás
+                    <Icon name='checkmark' /> 
+                    Beadás 
+                    {this.state.uploadState? 
+                      null
+                    :
+                    <Dimmer active>
+                      <Loader size='massive'/>
+                    </Dimmer>}
                   </Button>
                 }
                 text='beadod az új megoldást, ami felülírja az előzőt'
                 onAccept={() => {
+                  this.setState({
+                    uploadState: false
+                  })
                   this.props.addSolution({
                     task, accepted, corrected, note, name, description, file,
-                    }).then( ()=> {
-                      alert('Sikeres feltöltés!')
-                      this.setState({ showModal: false });
+                    }).then( (response)=> {
+                      this.setState({
+                        uploadState: true,
+                        showModal: false
+                      })
                       this.props.clearWrite();
-                    }, ()=> {
+                    }, (response)=> {
                       alert('Sikertelen feltöltés!')
                     });
                   }

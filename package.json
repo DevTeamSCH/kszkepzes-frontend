@@ -4,7 +4,7 @@
   "private": false,
   "proxy": "http://127.0.0.1:8000/",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "http-proxy-middleware": "^0.20.0",
     "eslint-plugin-flowtype": "^4.6.0",
     "moment": "^2.24.0",
